@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #spinner3 {
+      margin:100px;
+
+      }
+      #circle {
+          border-radius: 50%;
+          width:150px;
+          height:150px;
+          background-color: yellow;
+          position:relative;
+          animation: size 2s cubic-bezier(0.215, 0.610, 0.355, 1) 0s infinite;
+      }
+      #circle::after {
+          content:"";
+          border-radius:50%;
+          width:150px;
+          height:150px;
+          border: 8px solid transparent;
+          border-top-color: greenyellow;
+          border-left-color: greenyellow;
+          position:absolute;
+          top: -8px;
+          left:-8px;
+          animation: turn 2s linear 0s infinite;
+      }
+      @keyframes size{
+          0%{ 
+              transform:scale(1)
+          }
+          50%{
+              transform:scale(1.2)
+          }
+          100%{
+            transform:scale(1);   
+          }
+      }
+      @keyframes turn{
+         0%{
+             transform:rotate(0deg);
+         }
+         100%{
+            transform:rotate(360deg);
+         }
+     }
+    </style>
+</head>
+<body>
+  <div id="spinner3">
+   <div id="circle"></div>
+  </div>  
+</body>
+</html>

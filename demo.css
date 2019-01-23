@@ -1,0 +1,12 @@
+.box{
+    margin:150px;
+    width:150px;
+    height:150px;
+    background-color: chocolate;
+    
+    transition:width 0.4s;
+}
+.box:hover{
+    width:200px;
+    
+}
